@@ -1,9 +1,12 @@
 body {
+  min-width: 960px;
+  font-weight: 700;
   font-size: 14px;
   line-height: 24px;
-  color: #000000;
-  font-weight: 700;
   font-family: "PT Sans Narrow", "Arial", sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: #000000 url("img/body-bg.jpg") no-repeat center top;
 }
 
 h1 {
@@ -30,7 +33,7 @@ h2 {
 
 .container {
   width: 940px;
-  padding: 0 10px 0 10px;
+  padding: 0 10px;
   margin: 0 auto;
 }
 
@@ -38,12 +41,73 @@ h2 {
 
 /*Шапка*/
 
+.inner-header {
+  margin-bottom: 60px;
+  color: #ffffff;
+  background-color: #000000;
+}
+
 .inner-navigation {
   float: left;
+  width: 780px;
+}
+
+.inner-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 0;
+}
+
+.inner-menu li {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: top;
 }
 
 .inner-header .user-block {
   float: right;
+  max-width: 140px;
+}
+
+.inner-logo {
+  float: left;
+  width: 111px;
+  height: 20px;
+  padding-top: 22px;
+}
+
+.inner-logo img {
+  width: 111px;
+  height: 24px;
+}
+
+
+
+.inner-menu a {
+  display: block;
+  padding: 25px 20px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.login {
+  position: relative;
+
+  display: inline-block;
+  padding: 25px 20px;
+  padding-left: 50px;
+
+  font-size: 16px;
+  line-height: 20px;
+  vertical-align: top;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.login:hover {
+  background-color: #242424;
 }
 
 /*Фильтры*/
