@@ -6,9 +6,10 @@ body {
   font-family: "PT Sans Narrow", "Arial", sans-serif;
   color: #ffffff;
   text-transform: uppercase;
-  background: #000000 url("img/body-bg.jpg") no-repeat center top;
 }
-
+.main-bg {
+  background: #000000 url("../img/main-bg.jpg") no-repeat center top;
+}
 h1 {
   font-size: 30px;
   line-height: 42px;
@@ -36,78 +37,192 @@ h2 {
   padding: 0 10px;
   margin: 0 auto;
 }
-
-/********************************************************               catalog.html                          ********************************************************/
+.btn {
+  padding: 10px;
+  color: #ffffff;
+  background-color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+}
+.btn-lightgray {
+  padding: 10px;
+  color: #000000;
+  background-color: #e5e5e5;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+}
+.inner-page-bg {
+  background-image: url("../img/index-bg.jpg");
+}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+catalog.html
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
 
 /*Шапка*/
 
-.inner-header {
+.main-header {
   margin-bottom: 60px;
   color: #ffffff;
   background-color: #000000;
 }
 
-.inner-navigation {
+.main-navigation {
   float: left;
   width: 780px;
 }
 
-.inner-menu {
+.main-menu {
   padding: 0;
   margin: 0;
   list-style: none;
   font-size: 0;
 }
 
-.inner-menu li {
+.main-menu li {
   display: inline-block;
-  font-size: 16px;
-  line-height: 20px;
   vertical-align: top;
 }
 
-.inner-header .user-block {
+.main-header .user-block {
   float: right;
   max-width: 140px;
 }
 
-.inner-logo {
+.logo {
   float: left;
   width: 111px;
   height: 20px;
   padding-top: 22px;
 }
 
-.inner-logo img {
+.logo img {
   width: 111px;
   height: 24px;
 }
 
-
-
-.inner-menu a {
+.main-menu a {
   display: block;
-  padding: 25px 20px;
+  padding: 26px 20px;
   color: #ffffff;
   text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .login {
   position: relative;
-
   display: inline-block;
-  padding: 25px 20px;
-  padding-left: 50px;
-
+  padding: 26px 20px;
+  padding-left: ;
   font-size: 16px;
   line-height: 20px;
   vertical-align: top;
   color: #ffffff;
   text-decoration: none;
 }
-
+.main-menu a:hover,
 .login:hover {
   background-color: #242424;
+}
+
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+index.html
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+
+/*Лого*/
+
+.index-logo {
+  width: 368px;
+  height: 204px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Особенности*/
+
+.features {
+  margin-bottom: 75px;
+}
+.features-item {
+  float: left;
+  width: 300px;
+  font-weight: 700;
+  text-align: center;
+}
+.features-item:nth-child(2) {
+  margin: 0 20px;
+}
+.feature-name {
+  position: relative;
+  display: block;
+  width: 300px;
+  padding-bottom: 35px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 42px;
+}
+.feature-name::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  margin-left: -7px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+}
+.feature-description {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/*Светлые блоки с разной инфой*/
+
+.index-content {
+  padding: 45px 80px;
+  padding-bottom: 50px;
+  margin-bottom: 35px;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  background-image: url("../img/index-bg.jpg");
+}
+.index-content-left {
+  float: left;
+  width: 355px;
+}
+.index-content-right {
+  float: right;
+  width: 300px;
+}
+.index-content-title {
+  font-size: 30px;
+  line-height: 36px;
+}
+.news-preview {
+  list-style: none;
+  padding-left: 0;
+}
+.news-preview p {
+  width: 360px;
+}
+.news-preview time {
+  text-transform: lowercase;
+}
+
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+catalog.html
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/*Хлебные крошки*/
+.breadcrumbs ul {
+  list-style: none;
+}
+.breadcrumbs li {
+  display: inline-block;
 }
 
 /*Фильтры*/
@@ -116,7 +231,20 @@ h2 {
   float: left;
   width: 220px;
   margin-right: 20px;
+  color: #000000;
 }
+.filters-firms,
+.filters-group {
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+}
+.filters-firms ul,
+.filters-group ul {
+  list-style: none;
+  padding: 0;
+}
+
 
 /*Товары*/
 
@@ -130,6 +258,7 @@ h2 {
   display: inline-block;
   width: 220px;
   margin-right: 20px;
+  vertical-align: top;
 }
 
 .goods-item:nth-child(3n) {
@@ -139,9 +268,13 @@ h2 {
 /*Пагинатор*/
 
 .page-selector {
+  list-style: none;
+  padding: 0;
   clear: both;
 }
-
+.page-selector li {
+  display: inline-block;
+}
 /*Подвал*/
 
 .footer-contacts {
